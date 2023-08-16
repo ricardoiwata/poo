@@ -9,22 +9,23 @@ package br.com.ucb.controller;
  * @author ricardo.iwata
  */
 public class Desconto {
-        private int Valor;
-
+        private double Valor;
+        double res;
     public double getValor() {
         return Valor;
     }
 
-    public void setValor(int Valor) {
+    public void setValor(double Valor) {
         this.Valor = Valor;
     }
          
-        public int calcularDesconto(){
+        public double calcularDesconto(){
             if(Valor <= 500){
-                return (int) (this.Valor - Valor * 0.05);
+                res=(double)(this.Valor - Valor * 0.05);
             }
             else{
-                return (int) (this.Valor - Valor * 0.10);
+                res=(double)(this.Valor - Valor * 0.10);
             }
+            return res;
         }
 }

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Tela {
     public static void main(String[] args){
         Desconto d = new Desconto();
-        d.setValor(Integer.parseInt(JOptionPane.showInputDialog( "Digite o valor para ser calculado o desconto:")));
+        d.setValor(Double.parseDouble(JOptionPane.showInputDialog( "Digite o valor para ser calculado o desconto:")));
        
         JOptionPane.showMessageDialog(null, d.calcularDesconto());
     }
